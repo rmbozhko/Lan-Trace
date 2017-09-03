@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import datetime as dt
+import numpy as np
 
 # data to plot
 bus_name = str(['bus-09-85'])
@@ -18,11 +19,7 @@ plt.plot(days, total_conn, color="#3182bd", linewidth=2.5, label="Заг. к-с�
 plt.plot(days, unique_conn, color="#cccccc",  linewidth=2.5, linestyle="--", label="Унк. підключення")
 plt.gcf().autofmt_xdate()
 plt.legend(loc='upper right')
-plt.savefig('bar_chart_1.png')
-
-'''
-import numpy as np
-import matplotlib.pyplot as plt
+plt.savefig('line_chart.png')
  
 # data to plot
 bus_name = str(['bus-09-85'])
@@ -56,5 +53,4 @@ plt.xticks(index + bar_width, days)
 plt.legend()
  
 plt.tight_layout()
-plt.savefig('bar_chart_1.png')
-'''
+plt.savefig('bar_chart.png')
